@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js" defer></script>
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="main__container">
+        <div class="app">
+          <form action="" class="form">
+            <fieldset id="dayField" class="form__fieldset">
+              <legend class="form__title">DAY</legend>
+              <input id="day" name="day" class="form__input" type="number" placeholder="DD" />
+              <label class="form__error" for="day"></label>
+            </fieldset>
+            <fieldset id="monthField" class="form__fieldset">
+              <legend class="form__title">MONTH</legend>
+              <input id="month" name="month" class="form__input" type="number" placeholder="MM" />
+              <label class="form__error" for="month"></label>
+            </fieldset>
+            <fieldset id="yearField" class="form__fieldset">
+              <legend class="form__title">YEAR</legend>
+              <input id="year" name="year" class="form__input" type="number" placeholder="YYYY" />
+              <label class="form__error" for="year"></label>
+            </fieldset>
+            <button id="formBtn" class="form__button" type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+                <g fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                  />
+                </g>
+              </svg>
+            </button>
+          </form>
+          <div class="result">
+            <p class="result__text"><span id="yearRes" class="result__num">- -</span> years</p>
+            <p class="result__text"><span id="monthRes" class="result__num">- -</span> month</p>
+            <p class="result__text"><span id="dayRes" class="result__num">- -</span> days</p>
+          </div>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="https://github.com/Lagertt" target="_blank">Polina Ryabova</a>.
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
