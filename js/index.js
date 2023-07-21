@@ -1,3 +1,17 @@
+// получает объект вида {year: 0, month: 0, day: 0} с датой, введённой пользователем
+// возвращает объект такого же вида с разницой между введённой датой и текущей
+function calcDiff(inputObjDate) {
+  const inputDate = new Date(+inputObjDate.year, +inputObjDate.month - 1, +inputObjDate.day); // переводим переданный объект в формат даты js
+  const ageDate = new Date(new Date() - inputDate); // считаем разницу между текущей датой и введённой (возраст)
+
+  // переводим полученный результат из формата даты в объект
+  const nullDate = new Date(0);
+  year = ageDate.getFullYear() - nullDate.getFullYear();
+  month = ageDate.getMonth() - nullDate.getMonth();
+  day = ageDate.getDate() - nullDate.getDate();
+
+  return { day, month, year };
+}
 function validationForm(date) {
   let isOk = true;
 
