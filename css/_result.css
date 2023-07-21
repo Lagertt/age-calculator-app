@@ -1,0 +1,27 @@
+.result {
+  margin-top: 20px;
+}
+
+.result__text {
+  font-size: 64px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.result__num {
+  color: var(--color-purple);
+}
+
+
+
+
+@media (max-width: 630px) {
+  .result {
+    margin-top: 40px;
+  }
+
+  .result__text {
+    font-size: 42px;
+  }
+}
+
