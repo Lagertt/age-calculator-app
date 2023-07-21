@@ -54,6 +54,8 @@ function printAge(fields, age) {
 // возвращает объект такого же вида с разницой между введённой датой и текущей
 function calcDiff(inputObjDate) {
   const inputDate = new Date(+inputObjDate.year, +inputObjDate.month - 1, +inputObjDate.day); // переводим переданный объект в формат даты js
+  if (+inputObjDate.year < 100) inputDate.setFullYear(inputDate.getFullYear() - 1900); // баг формата Date с малым годом
+
   const ageDate = new Date(new Date() - inputDate); // считаем разницу между текущей датой и введённой (возраст)
 
   // переводим полученный результат из формата даты в объект
