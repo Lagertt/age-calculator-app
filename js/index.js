@@ -1,3 +1,18 @@
+// возвращает объект, в котором ключи - названия полей (год, месяц, день), а значения - соответствующие им html элементы
+function getResultFields() {
+  const fieldYear = document.getElementById('yearRes');
+  const fieldMonth = document.getElementById('monthRes');
+  const fieldDay = document.getElementById('dayRes');
+
+  return { year: fieldYear, month: fieldMonth, day: fieldDay };
+}
+
+// получает html элементы и вставляет в них значения возраста, если age не передан, заполняет прочерками
+function printAge(fields, age) {
+  for (let field in fields) {
+    fields[field].textContent = age !== undefined ? age[field] : '- -';
+  }
+}
 // получает объект вида {year: 0, month: 0, day: 0} с датой, введённой пользователем
 // возвращает объект такого же вида с разницой между введённой датой и текущей
 function calcDiff(inputObjDate) {
