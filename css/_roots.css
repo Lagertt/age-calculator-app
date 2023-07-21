@@ -1,0 +1,12 @@
+:root {
+  --color-purple: hsl(259, 100%, 65%);
+  --color-light-red: hsl(0, 100%, 67%);
+  --color-light-grey: hsl(0, 0%, 86%);
+  --color-smokey-grey: hsl(0, 1%, 44%);
+  --color-off-black: hsl(0, 0%, 8%);
+  --color-off-white: hsl(0, 0%, 94%);
+  --color-c: hsl(0, 0%, 100%);
+
+  --width-destop: 1440px;
+  --width-mobile: 375px;
+}
