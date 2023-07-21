@@ -1,3 +1,20 @@
+const formElement = document.querySelector('.form');
+formElement.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  blurInputs(formElement);
+
+  let ObjDate = getDateValues(formElement);
+
+  if (validationForm(ObjDate)) {
+    // если форма прошла валидацию
+    const age = calcDiff(ObjDate); // считаем возраст
+    printAge(getResultFields(), age); // выводим его
+  } else {
+    printAge(getResultFields()); // иначе выводим пустые значения в полях
+  }
+});
+
 // убирает фокус со всех Input в форме, полученной на входе
 function blurInputs(form) {
   const inputs = form.querySelectorAll('.form__input');
@@ -32,6 +49,7 @@ function printAge(fields, age) {
     fields[field].textContent = age !== undefined ? age[field] : '- -';
   }
 }
+
 // получает объект вида {year: 0, month: 0, day: 0} с датой, введённой пользователем
 // возвращает объект такого же вида с разницой между введённой датой и текущей
 function calcDiff(inputObjDate) {
@@ -46,6 +64,7 @@ function calcDiff(inputObjDate) {
 
   return { day, month, year };
 }
+
 function validationForm(date) {
   let isOk = true;
 
