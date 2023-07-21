@@ -5,6 +5,18 @@ function blurInputs(form) {
     input.blur();
   });
 }
+
+// создаёт объект вида {year: 0, month: 0, day: 0} со значениями, введёнными пользователем в форме
+function getDateValues(form) {
+  const formData = new FormData(form);
+  let inputObjDate = {};
+  inputObjDate.year = formData.get('year');
+  inputObjDate.month = formData.get('month');
+  inputObjDate.day = formData.get('day');
+
+  return inputObjDate;
+}
+
 // возвращает объект, в котором ключи - названия полей (год, месяц, день), а значения - соответствующие им html элементы
 function getResultFields() {
   const fieldYear = document.getElementById('yearRes');
