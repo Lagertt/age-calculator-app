@@ -1,3 +1,10 @@
+// убирает фокус со всех Input в форме, полученной на входе
+function blurInputs(form) {
+  const inputs = form.querySelectorAll('.form__input');
+  inputs.forEach((input) => {
+    input.blur();
+  });
+}
 // возвращает объект, в котором ключи - названия полей (год, месяц, день), а значения - соответствующие им html элементы
 function getResultFields() {
   const fieldYear = document.getElementById('yearRes');
