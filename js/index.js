@@ -78,6 +78,7 @@ function validationForm(date) {
   const fieldsetMonth = document.getElementById('monthField');
   const fieldsetYear = document.getElementById('yearField');
 
+  // валидация дня
   if (day < 1 || day > 31) {
     if (date.day === '') printError('This field is required', fieldsetDay);
     else printError('Must be a valid day', fieldsetDay);
@@ -86,6 +87,7 @@ function validationForm(date) {
     deleteError(fieldsetDay);
   }
 
+  // валидация месяца
   if (month < 1 || month > 12) {
     if (date.month === '') printError('This field is required', fieldsetMonth);
     else printError('Must be a valid month', fieldsetMonth);
@@ -93,7 +95,8 @@ function validationForm(date) {
   } else {
     deleteError(fieldsetMonth);
   }
-
+   
+  // валидация года
   if (year < 1 || year > new Date().getFullYear()) {
     if (date.year === '') printError('This field is required', fieldsetYear);
     else printError('Must be in the past', fieldsetYear);
@@ -102,6 +105,7 @@ function validationForm(date) {
     deleteError(fieldsetYear);
   }
 
+  // валидация даты вцелом
   if (isOk) {
     const copyDate = new Date(year, month - 1, day);
     if (copyDate.getMonth() !== month - 1) {
