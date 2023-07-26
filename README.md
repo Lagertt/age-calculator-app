@@ -1,5 +1,7 @@
 # Frontend Mentor - Age calculator app
 
+<img src="assets/images/Preview.png" width="70%"/>
+
 ## The challenge
 
 Your challenge is to build out this age calculator app and get it looking as close to the design as possible.
@@ -19,8 +21,3 @@ Your users should be able to:
 - See hover and focus states for all interactive elements on the page
 - **Bonus**: See the age numbers animate to their final number when the form is submitted
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
