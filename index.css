@@ -1,9 +1,9 @@
-@import url('css/_normalize.css');
-@import url('css/_reset.css');
-@import url('css/_roots.css');
-@import url('css/_fonts.css');
-@import url('css/_containers.css');
+@import url('css/normalize.css');
+@import url('css/reset.css');
+@import url('css/roots.css');
+@import url('css/fonts.css');
+@import url('css/containers.css');
 @import url('css/form.css');
-@import url('css/_result.css');
-@import url('css/_attribution.css');
-@import url('css/_media.css');
+@import url('css/result.css');
+@import url('css/attribution.css');
+@import url('css/media.css');
